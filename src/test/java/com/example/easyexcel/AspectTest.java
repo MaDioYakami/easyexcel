@@ -25,7 +25,7 @@ public class AspectTest {
     @Test
     public void testOne() {
         person.setName("madio");
-        person.setAge("11");
+        person.setAge(11);
         person.toString();
         person.getName();
 

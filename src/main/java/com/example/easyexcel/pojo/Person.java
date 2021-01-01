@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class Person {
     private String id;
     private String name;
-    private String age;
+    private int age;
 
 
 }
