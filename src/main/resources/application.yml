@@ -1,0 +1,3 @@
+spring:
+  aop:
+    auto: true #启动aop配置
