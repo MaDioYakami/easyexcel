@@ -42,7 +42,7 @@ public class ExcelTest {
     public void readMoreThan1000Row() {
         String filePath = "/Users/madiodio/测试.xlsx";
         Sheet sheet = new Sheet(1, 1);
-        List<Object> objects = ExcelUtil.readMoreThan1000Row(filePath,sheet);
+        List<Object> objects = ExcelUtil.readMoreThan1000Row(filePath, sheet);
         objects.forEach(System.out::println);
     }
 
@@ -53,7 +53,7 @@ public class ExcelTest {
      */
     @Test
     public void writeBySimple() {
-        String filePath = "/Users/madiodio/测试.xlsx";
+        String filePath = "D://测试.xlsx";
         List<List<Object>> data = new ArrayList<>();
         data.add(Arrays.asList("111", "222", "333"));
         data.add(Arrays.asList("111", "222", "333"));
@@ -115,7 +115,6 @@ public class ExcelTest {
 
 
     /*******************匿名内部类，实际开发中该对象要提取出去**********************/
-
 
 
 }
