@@ -1,3 +1,10 @@
 spring:
   aop:
-    auto: true #启动aop配置
+    auto: false #启动aop配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.253:3306/madio
+    username: root
+    password: 123456
+mybatis:
+  mapper-locations: classpath:com.example.easyexcel.mapper/*.xml
