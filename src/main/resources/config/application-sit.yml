@@ -5,7 +5,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/madio
     username: root
-    password: ENC(cBMnTaTTp1SSNtwoPC+U4Q==)
+    password: ENC(Z4t2i59nn4i52XCyjdERwyYNu3zNTmKwiWEC9I1dfRWz9qygy86vKHNGuBFBOMuk)
 mybatis:
   mapper-locations: classpath:com.example.easyexcel.mapper/*.xml
 jasypt:
