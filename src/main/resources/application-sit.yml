@@ -1,0 +1,14 @@
+spring:
+  aop:
+    auto: false #启动aop配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/madio
+    username: root
+    password: ENC(cBMnTaTTp1SSNtwoPC+U4Q==)
+mybatis:
+  mapper-locations: classpath:com.example.easyexcel.mapper/*.xml
+jasypt:
+  encryptor:
+    #这里可以理解成是加解密的时候使用的密钥
+    password: madio1992
