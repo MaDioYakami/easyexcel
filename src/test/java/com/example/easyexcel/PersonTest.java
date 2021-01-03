@@ -22,7 +22,8 @@ public class PersonTest {
     @Test
     public void TestOne() {
         List<Person> personList = personService.queryAll();
-        personList.forEach(System.out::println);
+        //personList.forEach(System.out::println);
+        personList.forEach((el)->{System.out.println(el.toString());});
 
     }
 
