@@ -22,10 +22,8 @@ public class PersonTest {
     @Test
     public void TestOne() {
         List<Person> personList = personService.queryAll();
-        for (Person person :
-                personList) {
-            System.out.println(person.toString());
-        }
+        personList.forEach(System.out::println);
+
     }
 
 }
