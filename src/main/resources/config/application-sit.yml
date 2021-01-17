@@ -3,7 +3,7 @@ spring:
     auto: false #启动aop配置
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.0.253:3306/madio
+    url: jdbc:mysql://192.168.0.110:3306/madio
     username: root
     password: ENC(Z4t2i59nn4i52XCyjdERwyYNu3zNTmKwiWEC9I1dfRWz9qygy86vKHNGuBFBOMuk)
 mybatis:
