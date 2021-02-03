@@ -1,5 +1,7 @@
 package com.example.easyexcel;
 
+import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.Sheet;
 import com.example.easyexcel.pojo.TableHeaderExcelProperty;
 import com.example.easyexcel.util.ExcelUtil;
@@ -8,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @SpringBootTest
@@ -53,13 +56,19 @@ public class ExcelTest {
      */
     @Test
     public void writeBySimple() {
-        String filePath = "D://测试.xlsx";
+        String filePath = "/Users/madio/测试.xlsx";
         List<List<Object>> data = new ArrayList<>();
-        data.add(Arrays.asList("111", "222", "333"));
-        data.add(Arrays.asList("111", "222", "333"));
-        data.add(Arrays.asList("111", "222", "333"));
-        List<String> head = Arrays.asList("表头1", "表头2", "表头3");
-        ExcelUtil.writeBySimple(filePath, data, head);
+        for(int i=0;i<100000;i++){
+            data.add(Arrays.asList("111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444","111", "222", "333","111", "222", "333","111", "222", "333","444"));
+        }
+        //List<String> head = Arrays.asList("表头1", "表头2", "表头3");
+        List<List<String>> headlist = new ArrayList<>();
+        headlist.add(Arrays.asList("表头1"));
+        headlist.add(Arrays.asList("表头2"));
+        headlist.add(Arrays.asList("表头3"));
+
+        //ExcelUtil.writeBySimple(filePath, data, head);
+        EasyExcel.write(filePath).sheet("sheet").head(headlist).doWrite(data);
     }
 
 
