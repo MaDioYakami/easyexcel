@@ -3,6 +3,9 @@ package com.example.easyexcel;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.Sheet;
+import com.example.easyexcel.pojo.ComplexHeadData;
+import com.example.easyexcel.pojo.DataDemo;
+import com.example.easyexcel.pojo.MultiLineHeadExcelModel;
 import com.example.easyexcel.pojo.TableHeaderExcelProperty;
 import com.example.easyexcel.util.ExcelUtil;
 import org.junit.jupiter.api.Test;
@@ -70,6 +73,17 @@ public class ExcelTest {
         //ExcelUtil.writeBySimple(filePath, data, head);
         EasyExcel.write(filePath).sheet("sheet").head(headlist).doWrite(data);
     }
+
+    @Test
+    public void writeBySimple2() {
+        String filePath = "/Users/madio/测试.xlsx";
+        List<List<Object>> data = new ArrayList<>();
+        //EasyExcel.write(filePath, DataDemo.class).sheet("sheet").doWrite(data);
+        //EasyExcel.write(filePath, ComplexHeadData.class).sheet("sheet").doWrite(data);
+        EasyExcel.write(filePath, MultiLineHeadExcelModel.class).sheet("sheet").doWrite(data);
+    }
+
+
 
 
     /**
