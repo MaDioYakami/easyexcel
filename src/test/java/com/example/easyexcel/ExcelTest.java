@@ -76,7 +76,7 @@ public class ExcelTest {
 
     @Test
     public void writeBySimple2() {
-        String filePath = "/Users/madio/测试.xlsx";
+        String filePath = "/Users/madiodio/测试.xlsx";
         List<List<Object>> data = new ArrayList<>();
         //EasyExcel.write(filePath, DataDemo.class).sheet("sheet").doWrite(data);
         //EasyExcel.write(filePath, ComplexHeadData.class).sheet("sheet").doWrite(data);
