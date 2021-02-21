@@ -65,7 +65,7 @@ public class PoiExcelTest {
         //输出Excel文件
         FileOutputStream out = null;
         try {
-            out = new FileOutputStream("/Users/madiodio/测试.xlsx");
+            out = new FileOutputStream("/Users/madio/测试.xlsx");
             wb.write(out);
         } catch (IOException e) {
             e.printStackTrace();
