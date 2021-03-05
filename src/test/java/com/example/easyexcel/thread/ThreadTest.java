@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class ThreadTest {
@@ -12,7 +13,7 @@ public class ThreadTest {
     public void testOne() {
         ThreadExtend threadOne = new ThreadExtend();
         threadOne.start();
-        new Thread(()->{
+        new Thread(() -> {
             System.out.println("这是lamda表达式的线程");
         }).start();
     }
@@ -42,6 +43,12 @@ public class ThreadTest {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testFour() {
+        AtomicInteger atomicInteger = new AtomicInteger();
+        int i = atomicInteger.getAndIncrement();
     }
 
 
