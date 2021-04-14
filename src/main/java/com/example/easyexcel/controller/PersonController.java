@@ -1,6 +1,7 @@
 package com.example.easyexcel.controller;
 
 import com.example.easyexcel.pojo.Person;
+import com.example.easyexcel.pojo.PersonDTO;
 import com.example.easyexcel.service.PersonService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +31,9 @@ public class PersonController {
     }
 
     @PostMapping(value = "checkPerson")
-    public Person checkPerson(@RequestBody @Validated Person person) {
+    public Person checkPerson(@RequestBody @Validated PersonDTO person) {
         log.info(JSON.toJSONString(person));
-        return person;
+        return person.getBody();
     }
 
     @PostMapping(value = "checkPerson2")
